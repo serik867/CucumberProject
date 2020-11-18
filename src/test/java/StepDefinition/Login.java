@@ -15,7 +15,7 @@ public class Login{
     public void navigateToTheWebsite() {
         driver=DriverFactory.getDriver();
        driver.get("https://test.basqar.techno.study/");
-//        System.out.println("HIIII");
+
     }
 
 
