@@ -12,11 +12,14 @@ public class MainPagePOMElements extends ParentClass {
 
     }
 
-    @FindBy(css = "a[title='Women']")
-    private WebElement womenBtn;
+    @FindBy(xpath = "//*[@id=\"mat-input-0\"]")
+    private WebElement userNameInput;
 
-    @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[2]/a")
-    private WebElement dressesBtn;
+    @FindBy(xpath = "//*[@id=\"mat-input-1\"]")
+    private WebElement passwordInput;
+
+    @FindBy(xpath = "//*[@id=\"login-form\"]/div[2]/form/button")
+    private WebElement loginBtn;
 
 
 
@@ -25,13 +28,24 @@ public class MainPagePOMElements extends ParentClass {
     public void findElementAndClickFunction(String ElementName){
 
         switch (ElementName) {
-            case "womenBtn":
-                myElement = womenBtn;
+            case "loginBtn":
+                myElement = loginBtn;
                 break;
-            case "dressesBtn":
-                myElement = dressesBtn;
-                break;
+
         }
             clickFunction(myElement);
         }
+
+    public void findInputAndSendKeys(String ElementName,String value){
+        switch (ElementName) {
+            case "userNameInput":
+                myElement = userNameInput;
+                break;
+            case "passwordInput":
+                myElement =passwordInput;
+                break;
+                }
+        sendKeysFunction(myElement,value);
+    }
+
 }
