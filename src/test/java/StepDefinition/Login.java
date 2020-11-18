@@ -15,6 +15,7 @@ public class Login{
     @Given("Navigate to the website")
     public void navigateToTheWebsite() {
         driver=DriverFactory.getDriver();
+        driver.manage().window().maximize();
        driver.get("https://test.basqar.techno.study/");
 
     }
