@@ -14,18 +14,13 @@ public class Login{
     @Given("Navigate to the website")
     public void navigateToTheWebsite() {
         driver=DriverFactory.getDriver();
-       driver.get("http://automationpractice.com/index.php");
+       driver.get("https://test.basqar.techno.study/");
 //        System.out.println("HIIII");
     }
 
-    @And("Click the Women button")
-    public void clickTheWomenButton() {
-        pomClass.findElementAndClickFunction("womenBtn");
-    }
 
-    @And("Go back and click Dresses button")
-    public void goBackAndClickDressesButton() {
+    @And("Enter username and password")
+    public void enterUsernameAndPassword() {
 
-        pomClass.findElementAndClickFunction("dressesBtn");
     }
 }
