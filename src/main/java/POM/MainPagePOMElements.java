@@ -21,6 +21,7 @@ public class MainPagePOMElements extends ParentClass {
     @FindBy(xpath = "//*[@id=\"login-form\"]/div[2]/form/button")
     private WebElement loginBtn;
 
+    @FindBy()
 
 
     WebElement myElement;
