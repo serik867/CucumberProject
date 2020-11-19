@@ -15,8 +15,9 @@ public class Login{
     @Given("Navigate to the website")
     public void navigateToTheWebsite() {
         driver=DriverFactory.getDriver();
-        driver.manage().window().maximize();
-       driver.get("https://test.basqar.techno.study/");
+
+        driver.get("https://test.basqar.techno.study/");
+        driver.manage().window().fullscreen();
 
     }
 
@@ -28,8 +29,13 @@ public class Login{
 
     }
 
-    @Then("Click Login button")
-    public void clickLoginButton() {
+//    @Then("Click Login button")
+//    public void clickLoginButton() {
+//        pomClass.findElementAndClickFunction("loginBtn");
+//    }
+
+    @Then("Click button {string}")
+    public void clickButton(String btnName) {
         pomClass.findElementAndClickFunction("loginBtn");
     }
 

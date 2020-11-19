@@ -1,9 +1,9 @@
 Feature: Login web site
 
-  Scenario: Login Basqar
+  Scenario: Login to Basqar
     Given Navigate to the website
     And Enter username and password
-    Then Click Login button
+    Then Click button "loginBtn"
 
 
 

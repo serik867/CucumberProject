@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class ParentClass {
     WebDriver driver;
     WebDriverWait wait;
@@ -46,5 +48,15 @@ public class ParentClass {
 
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().contains(myText));
+    }
+
+    public void listContainsText(List<WebElement> elements , String myText){
+
+        for (WebElement element : elements) {
+//            waitUntilVisible(element);
+            System.out.println(element);
+        }
+
+        Assert.assertTrue(elements.contains(myText));
     }
 }
