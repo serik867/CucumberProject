@@ -21,7 +21,7 @@ public class Student {
         driver=new ChromeDriver();
         driver.get("https://test.basqar.techno.study/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
     }
 
     @Given("Enter the {string} and {string} Click on log in button")
